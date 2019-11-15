@@ -5,7 +5,7 @@ import technology.sola.byork.UserInterface;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
-public class Invoker {
+public class CommandInvoker {
   public void invoke(String input) {
     Command command = parse(input.toLowerCase());
 

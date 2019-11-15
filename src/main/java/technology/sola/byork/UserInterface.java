@@ -19,11 +19,11 @@ public class UserInterface {
   }
 
   public void displayMessage(String message) {
-    System.out.println(message);
+    System.out.println(message); //NOSONAR
   }
 
   public void displayErrorMessage(String message) {
-    System.err.println(message);
+    System.err.println(message); //NOSONAR
   }
 }
 

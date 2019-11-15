@@ -10,7 +10,7 @@ public class HelpCommand implements Command {
   private List<Pattern> patterns = new ArrayList<>();
 
   public HelpCommand() {
-    Command.commands.add(this);
+    Command.commands.add(this); // TODO get away from this pattern
 
     patterns.add(Pattern.compile("help"));
   }

@@ -1,0 +1,105 @@
+{
+  "0": {
+    "description": "A flowery meadow.",
+    "dark": false,
+    "exit": false,
+    "objects": [
+      {
+        "name": "flashlight",
+        "battery": 5
+      },
+      {
+        "name": "key"
+      },
+      {
+        "name": "scroll",
+        "wisdom": "You'll need a key to open doors."
+      }
+    ],
+    "connections": [
+      {
+        "id": "1",
+        "description": "a flowery door",
+        "direction": "north",
+        "locked": true
+      }
+    ]
+  },
+
+  "1": {
+    "description": "An old abandoned house.",
+    "dark": false,
+    "exit": false,
+    "objects": [
+      {
+        "name": "scroll",
+        "wisdom": "Don't try moving in the dark for. Use a flashlight first."
+      },
+      {
+        "name": "flashlight",
+        "battery": 1
+      }
+    ],
+    "connections": [
+      {
+        "id": "0",
+        "description": "a flowery door",
+        "direction": "south",
+        "locked": true
+      },
+      {
+        "id": "2",
+        "description": "a dark cave entrance",
+        "direction": "down",
+        "locked": false
+      }
+    ]
+  },
+
+  "2": {
+    "description": "A cave.",
+    "dark": true,
+    "exit": false,
+    "objects": [
+      {
+        "name": "flashlight",
+        "battery": 4
+      },
+      {
+        "name": "treasure",
+        "score": 100
+      }
+    ],
+    "connections": [
+      {
+        "id": "1",
+        "description": "a light from outside",
+        "direction": "up",
+        "locked": false
+      },
+      {
+        "id": "3",
+        "description": "an exit",
+        "direction": "west",
+        "locked": false
+      }
+    ]
+  },
+
+  "3": {
+    "description": "An exit!",
+    "dark": false,
+    "exit": true,
+    "objects": [
+
+    ],
+    "connections": [
+      {
+        "id": "2",
+        "description": "a cave entrance",
+        "direction": "east",
+        "locked": false
+      }
+    ]
+  }
+}
