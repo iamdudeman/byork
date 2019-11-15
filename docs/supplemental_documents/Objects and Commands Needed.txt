@@ -1,0 +1,15 @@
+Objects
+
+Key
+Flashlight
+Scroll
+
+
+Commands
+
+Move [direction]
+Look
+Look at [object]
+Use [object]
+Pickup [object]
+Help

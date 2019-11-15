@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1140</x>
+      <y>610</y>
+      <w>110</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Direction
+&lt;&lt;Enum&gt;&gt;
+--
+NORTH
+EAST
+SOUTH
+WEST
+UP
+DOWN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>160</x>
+      <y>320</y>
+      <w>450</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>ZorkMap
+--
+-playerLocation:Location
+-locToDesHM:&lt;String,String&gt;
+-locToConnHM:&lt;String,String&gt;
+-locToLinksHM:&lt;String,String&gt;
+-moveAttemptStatus:String
+
+
+--
++Zorkmap( )
++getCurrentLocationDescription():String
++move(:Direction): String
++isDoorStatus(:Direction,:int,:String):boolean
++addGameObjectToCurrentLocation(:GameObject )
++removeGameObjectFromCurrentLocation(:GameObject)
++retrieveAnyLocation(locationId:String):Location
++replaceAnyLocation(locationId:String, :Location);
+
++setDoorStatusForCurrentLocation(
+    :Direction, boolean:isLocked)
++getDirectionsWithLockedDoorsForCurrentLocation():List&lt;Direction&gt; 
+   \\ + getters &amp; setters
+   </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>990</x>
+      <y>630</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>150;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>720</x>
+      <y>450</y>
+      <w>300</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>Location
+--
+-locationId : int
+-locationDesc : String
+-locationConnTypes: String[]
+-locationLinks : String[]
+-currentLocationGameObjects:&lt;ArrayList&gt;
+--
+Location(loc:String, links:String, types:
+               String, desc:String)
++addGameObject(:GameObject):int
++removeGameObject(:GameObject):boolean
++countGameObjects():int
++extractLocationLinks(:String):String[]
++extractConnTypes(:String):String[]
++extractDescription(:String):String
++hasLocationAt(:Direction):int
++hasConnectionTypeAt(:Direction):String
+
+
+   \\ + getters &amp; setters</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>580</x>
+      <y>540</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>140;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1080</x>
+      <y>400</y>
+      <w>160</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+e.g.
+  "0" , 
+  "U,1,2,U" ,
+  "U,O,O,U" ,
+  "0 is in a house."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>450</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>240</x>
+      <y>690</y>
+      <w>470</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+\* main algorithm *\
+
+\* Be prepared to hold stuff placed in room. *\
+currentLocationGameObjects = new ArrayList&lt;GameObject&gt;();
+locationID 		= Util.strToInt(loc);
+locationLinks 		= this.extractLocationLinks(links);
+locationConnTypes 	= this.extractConnTypes(types);
+locationDesc 		= this.extractDescription(desc);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>560</y>
+      <w>150</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>680</x>
+      <y>340</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+move() updates player 
+Location after call. 
+If no move possible, 
+then no update</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>390</y>
+      <w>380</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;80.0;360.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1050</x>
+      <y>800</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Util
+--
+_+csvToArray(:String):String[]_
+_+strToInt(:String):int_
+_+strsToInts(:String[]):int[]_
+_+rtnKey(:String):int_
+_+rtnVal(:String):String_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>900</x>
+      <y>730</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>150;90;30;90;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>270</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>10</y>
+      <w>370</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>IZorkMap
+&lt;&lt;Interface&gt;&gt;
+--
+.
+--
++addGameObjectToCurrentLocation(:GameObject)
++getCurrentLocationDescription():String
++getCurrentLocationGameObjects():String
++getDirectionsWithLockedDoorsForCurrentLocation():List&lt;Direction&gt;
++move(Direction):String
++removeGameObjectFromCurrentLocation(GameObject)
++setDoorStatusForCurrentLocation(Direction, boolean)
++retrieveAnyLocation(locationId:String):Location
++replaceAnyLocation(locationId:String, :Location);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>100</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>GameObject
+&lt;&lt;Interface&gt;&gt;
+--
+.
+--
+drop(Player)
+getId():String
+getName():String
+inspect()
+pickup(Player)
+update()
+use()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>190</y>
+      <w>160</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>140.0;10.0;70.0;10.0;70.0;290.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1020</x>
+      <y>110</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+GameObject foo = new Scroll("test, so shut up.");</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>940</x>
+      <y>160</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>280</y>
+      <w>30</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+</diagram>

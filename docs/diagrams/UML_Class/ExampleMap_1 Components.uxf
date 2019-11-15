@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.UseCase</type>
+    <coordinates>
+      <x>350</x>
+      <y>70</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>0.
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.UseCase</type>
+    <coordinates>
+      <x>450</x>
+      <y>70</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1.
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.UseCase</type>
+    <coordinates>
+      <x>350</x>
+      <y>150</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>2.
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>60</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>30;30;100;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>340</x>
+      <y>70</y>
+      <w>50</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>30;80;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.UseCase</type>
+    <coordinates>
+      <x>450</x>
+      <y>150</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>3.
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>130</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>30;30;100;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>430</x>
+      <y>150</y>
+      <w>50</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;80;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.UseCase</type>
+    <coordinates>
+      <x>450</x>
+      <y>230</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>4.
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>80</y>
+      <w>160</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+LocationToDescription
+HashMap
+--
+\\ location=description
+--
+0="0 is in a house."
+1="1 is in front yard."
+2="2 is in back yard."
+3="3 is in a shed."
+4="4 is in a cellar."
+5="5 is in the attic."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>280</y>
+      <w>230</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>halign=center
+bg=gray
+LocationToConnectionType
+HashMap
+--
+\\ location=c N,E,S,W conn. type
+--
+0=U,O,O,U,O,U
+1=U,U,U,O,U,U
+2=O,O,U,U,U,U
+3=U,U,C,O,U,U
+4=C,U,U,U,U,U
+5=U,U,U,U,U,O
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>480</y>
+      <w>380</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=gray
+.                             LocationToDirecDesc
+.                                     HashMap
+--
+\\ location=N desc,E desc,S desc,W desc, U desc, D desc
+\\ e.g.: "SOUTH is a screen door"
+\\ e.g.: "UP is an attic entry"
+\\ e.g.: "DOWN is a stairway"
+\\ "U" gives only generic direction descriptions
+--
+0=U,U,a screen door,U,an attic entry,U
+1=U,U,U,U,U,U
+2=U,U,U,U,U,U
+3=U,U,U,U,U,U
+4=C,U,U,U,U,U
+5=U,U,U,U,U,a stairway
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>60</x>
+      <y>270</y>
+      <w>160</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+U = UNDEFINED
+O = PATH_OPEN
+C = PATH_CLOSED</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>300</y>
+      <w>150</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>130.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>20</x>
+      <y>50</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+If 'C' both ways, 
+then equivalent to
+locked door. Otherwise,
+equivalent to a one-
+way passage. </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>130</y>
+      <w>270</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>250.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.UseCase</type>
+    <coordinates>
+      <x>270</x>
+      <y>120</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>5.
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>260</x>
+      <y>60</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+up/dn</panel_attributes>
+    <additional_attributes>30;60;90;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>280</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>halign=center
+bg=gray
+LocationToLinks
+HashMap
+--
+\\ location=N,E,S,W link
+--
+0=U,1,2,U,5,U
+1=U,U,U,0,U,U
+2=0,3,U,U,U,U
+3=U,U,4,2,U,U
+4=3,U,U,U,U,U
+5=U,U,U,U,U,0
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>260</x>
+      <y>20</y>
+      <w>570</w>
+      <h>750</h>
+    </coordinates>
+    <panel_attributes>Example Map Components</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
