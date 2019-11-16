@@ -232,7 +232,7 @@ public class ByorkMapImpl implements ByorkMap {
     String roomObjects          = "";
     String fullDescription      = "";
 
-    if (!playerLocation.getIsDark() || Main.getPlayer().canSeeInDark()) {
+    if (!playerLocation.getIsDark() || (Main.getPlayer() != null && Main.getPlayer().canSeeInDark())) {
 
       locationDescription = playerLocation.getLocationDesc() + CR_LF;
       directionDescriptions = playerLocation.lookAllDirectionDescriptions();

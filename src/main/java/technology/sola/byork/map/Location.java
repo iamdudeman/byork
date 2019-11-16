@@ -120,7 +120,7 @@ public class Location {
    * @return an array with the location links in respective array element
    *         order.
    */
-  private String[] extractLocationLinks (String str) {
+  String[] extractLocationLinks (String str) {
     return MapUtils.csvToArray(str);
   }
 
@@ -132,7 +132,7 @@ public class Location {
    * @return an array with the connection types in respective array element
    *         order.
    */
-  private String[] extractConnTypes (String str) {
+  String[] extractConnTypes (String str) {
     return MapUtils.csvToArray(str);
   }
 
