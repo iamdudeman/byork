@@ -1,8 +1,6 @@
 package technology.sola.byork;
 
-import technology.sola.byork.commands.CommandInvoker;
-import technology.sola.byork.commands.ExitCommand;
-import technology.sola.byork.commands.HelpCommand;
+import technology.sola.byork.commands.*;
 import technology.sola.byork.map.ByorkMap;
 import technology.sola.byork.map.MapUtils;
 
@@ -14,13 +12,18 @@ public class Main {
     UserInterface userInterface = UserInterface.getInstance();
     CommandInvoker commandInvoker = new CommandInvoker();
 
-    ByorkMap byorkMap = MapUtils.loadMap("resources/First Dungeon.json");
+    ByorkMap byorkMap = MapUtils.loadMap("resources/first_dungeon.json");
     player = new Player(byorkMap);
 
     // Create commands
-    new HelpCommand();
+    new DropCommand(player);
     new ExitCommand(player);
-    // TODO other commands
+    new HelpCommand();
+    new InventoryCommand(player);
+    new LookCommand(byorkMap);
+    new MoveCommand(player);
+    new PickupCommand(byorkMap, player);
+    new UseCommand(byorkMap, player);
 
     userInterface.displayMessage(INTRO_MESSAGE);
 

@@ -1,6 +1,7 @@
-package technology.sola.byork.commands;
+package technology.sola.byork;
 
 import technology.sola.byork.UserInterface;
+import technology.sola.byork.commands.Command;
 
 import java.util.Iterator;
 import java.util.regex.Pattern;
