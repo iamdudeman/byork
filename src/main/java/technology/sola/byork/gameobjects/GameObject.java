@@ -2,7 +2,7 @@ package technology.sola.byork.gameobjects;
 
 import technology.sola.byork.Player;
 
-interface GameObject {
+public interface GameObject {
   String getId();
 
   String getName();
