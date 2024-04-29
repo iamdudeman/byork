@@ -1,4 +1,4 @@
-#Byork
+# Byork
 
 ---
 ## Instructions to run
@@ -7,7 +7,7 @@
 `java -jar byork-VERSION.jar`
 
 ---
-##Diagrams
+## Diagrams
 
 [UML Class](/docs/diagrams/UML_Class)
 
