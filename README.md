@@ -1,6 +1,6 @@
 # Byork
 
-This is a reimplementation the popular game Zork. This project was to fulfill the project 2 requirement for my Software Engineering course.
+This is a reimplementation the text based adventure game Zork. This project was to fulfill the project 2 requirement for my Software Engineering course in 2015. It was later uploaded here to GitHub.
 
 
 ---
